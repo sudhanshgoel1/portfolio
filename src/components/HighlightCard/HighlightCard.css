@@ -1,0 +1,93 @@
+/* Modern Highlight Card Styles */
+.highlight-card-modern {
+  background: var(--primary-gradient);
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  color: white;
+  margin-top: 2rem;
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.highlight-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.highlight-card-modern:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+.highlight-icon {
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.highlight-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.highlight-description {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+/* Mobile Responsiveness Improvements */
+@media (max-width: 991.98px) {
+  .highlight-card-modern {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .highlight-card-modern {
+    padding: 1rem;
+  }
+  
+  .highlight-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .highlight-title {
+    font-size: 1.1rem;
+  }
+  
+  .highlight-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .highlight-card-modern {
+    padding: 0.875rem;
+  }
+  
+  .highlight-icon {
+    font-size: 1.75rem;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .highlight-title {
+    font-size: 1rem;
+  }
+  
+  .highlight-description {
+    font-size: 0.85rem;
+  }
+}

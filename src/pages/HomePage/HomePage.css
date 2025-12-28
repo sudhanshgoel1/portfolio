@@ -1,0 +1,26 @@
+.Home {
+    background: linear-gradient(180deg, #071025 0%, #081426 100%);
+    background-color: #0f1724;
+}
+
+/* index.css */
+.animated-bg {
+    background: linear-gradient(-45deg, #121e31, #200947, #121e31, #200947);
+    /* background: linear-gradient(-45deg, #929292, #3a3a3a, #929292, #3a3a3a); */
+    background-size: 400% 400%;
+    animation: moveGradient 15s ease infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

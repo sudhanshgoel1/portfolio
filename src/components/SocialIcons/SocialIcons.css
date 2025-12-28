@@ -1,0 +1,14 @@
+.social-icon {
+  color: var(--text-primary);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: var(--primary-purple);
+}
+
+.blurred {
+  filter: blur(2px);
+  opacity: 0.5;
+}

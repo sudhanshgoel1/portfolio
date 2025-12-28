@@ -1,0 +1,110 @@
+/* Journey Item Component Styles */
+.journey-item {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-accent), transparent);
+}
+
+.journey-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.journey-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.journey-degree {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.journey-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-xl);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.journey-status.in-progress {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.journey-status.completed {
+  background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+}
+
+.journey-institution {
+  color: var(--primary-cyan);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.journey-location-duration {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.journey-location,
+.journey-duration {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.journey-description {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.journey-subjects {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.journey-subject-tag {
+  background: var(--bg-card-hover);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-primary);
+  transition: var(--transition-normal);
+}
+
+.journey-subject-tag:hover {
+  border-color: var(--border-accent);
+  color: var(--text-primary);
+}

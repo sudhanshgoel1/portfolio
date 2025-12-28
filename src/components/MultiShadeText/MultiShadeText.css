@@ -1,0 +1,34 @@
+/* Multi Shade Text Styles */
+.multi-shade-text {
+  display: inline-block;
+  white-space: pre;
+}
+
+/* Theme-aware gradient colors */
+:root {
+  --gradient-color-1: #7d5fff;
+  --gradient-color-2: #4e9fff;
+  --gradient-color-3: #18dcff;
+  --gradient-color-4: #4e9fff;
+  --gradient-color-5: #7d5fff;
+  --gradient-color-6: #b75fff;
+}
+
+[data-theme="dark"] {
+  --gradient-color-1: #7d5fff;
+  --gradient-color-2: #4e9fff;
+  --gradient-color-3: #18dcff;
+  --gradient-color-4: #4e9fff;
+  --gradient-color-5: #7d5fff;
+  --gradient-color-6: #b75fff;
+}
+
+/* Light theme uses slightly different colors for better contrast */
+[data-theme="light"] {
+  --gradient-color-1: #6d4eff;
+  --gradient-color-2: #3e8fff;
+  --gradient-color-3: #08ccff;
+  --gradient-color-4: #3e8fff;
+  --gradient-color-5: #6d4eff;
+  --gradient-color-6: #a74fff;
+}
