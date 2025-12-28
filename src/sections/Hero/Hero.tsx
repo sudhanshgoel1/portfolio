@@ -94,7 +94,7 @@ const Hero = (): JSX.Element => {
                   Get In Touch
                 </Link>
                 <a
-                  href="/resume/Sudhansh_Goel_Resume.pdf"
+                  href="/resume/Sudhansh Goel.pdf"
                   download="Sudhansh_Goel_Resume.pdf"
                   className="btn btn-outline-modern"
                 >
