@@ -94,8 +94,8 @@ const Hero = (): JSX.Element => {
                   Get In Touch
                 </Link>
                 <a
-                  href="/resume/Sudhansh_Goel_Resume.pdf"
-                  download="Sudhansh_Goel_Resume.pdf"
+                  href="/resume/Sudhansh_Goel.pdf"
+                  download="Sudhansh_Goel.pdf"
                   className="btn btn-outline-modern"
                 >
                   <FiDownload className="me-2" />
