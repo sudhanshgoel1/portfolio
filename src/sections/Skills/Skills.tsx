@@ -7,9 +7,7 @@ import MultiShadeText from '../../components/MultiShadeText/MultiShadeText';
 const Skills = (): JSX.Element => {
   // Additional technologies for tags
   const additionalTech = [
-    'Git', 'GitHub', 'VS Code', 'Postman', 'Figma', 'Jira', 
-    'Agile', 'Scrum', 'REST APIs', 'GraphQL', 'JWT', 'OAuth',
-    'Responsive Design', 'PWA', 'Testing', 'Debugging'
+    'Git', 'GitHub', 'Postman', 'Figma', 'Jira', 'REST APIs', 'GraphQL', 'JWT', 'OAuth', 'Microservices', 'Third-party Integrations', 'Twilio', 'Stripe', 'Supabase', 'CI/CD', 'Responsive Design', 'PWA', 'Testing', 'Debugging'
   ];
 
   return (
@@ -54,7 +52,7 @@ const Skills = (): JSX.Element => {
           </div>
 
           {/* Skills Stats */}
-          <div className="skills-stats" data-aos="fade-up" data-aos-delay="600">
+          {/* <div className="skills-stats" data-aos="fade-up" data-aos-delay="600">
             <div className="skills-stats-container grid-4">
               <div className="stat-card-unified">
                 <div className="stat-icon">💻</div>
@@ -88,7 +86,7 @@ const Skills = (): JSX.Element => {
                 <div className="stat-label">Years Learning</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Learning Philosophy */}
           <div className="learning-philosophy" data-aos="fade-up" data-aos-delay="800">

@@ -58,7 +58,7 @@ export const skills = [
     skills: [
       { name: "Golang", level: 90 },
       { name: "C#/.NET Core", level: 85 },
-      { name: "Node.js", level: 80 },
+      { name: "Entity Framework", level: 80 },
       { name: "Python", level: 75 },
     ]
   },
@@ -66,23 +66,23 @@ export const skills = [
     title: "Database & Tools",
     skills: [
       { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Redis", level: 75 },
-      { name: "Docker", level: 80 }
+      { name: "SQL Server", level: 80 },
+      { name: "VS Code", level: 90 },
+      { name: "Visual Studio", level: 80 }
     ]
   }
 ];
 
 export const experiences = [
   {
-    role: "Senior Full Stack Developer",
-    company: "Tech Solutions Inc.",
-    location: "Remote",
-    duration: "Jan 2023 - Present",
+    role: "Software Engineer",
+    company: "Ginilytics IT Solution Pvt. Limited",
+    location: "Mohali",
+    duration: "July 2024 - Present",
     description: "Leading development of scalable web applications and microservices architecture, mentoring junior developers, and implementing best practices for code quality and performance optimization.",
     responsibilities: [
       [
-        "Architected and developed 5+ full-stack applications using React and Golang",
+        "Architected and developed 2+ full-stack applications using React and .Net Core",
         "Implemented microservices architecture reducing system latency by 40%",
         "Led code reviews and established development best practices"
       ],
@@ -92,7 +92,7 @@ export const experiences = [
         "Collaborated with product team to define technical requirements"
       ]
     ],
-    tech: ["React", "TypeScript", "Golang", "PostgreSQL", "Docker", "Kubernetes", "AWS"]
+    tech: ["React", "TypeScript", "React Native", ".Net Core", "Golang", "PostgreSQL"]
   }
 ];
 
@@ -116,30 +116,39 @@ export const achievements = [
     year: "2022"
   },
   {
-    title: "Tech Speaker",
-    description: "Presented at 3 tech conferences",
+    title: "Multi-Domain Project Leadership",
+    description: "Led development of applications across healthcare, political campaign management, and marketing analytics domains.",
     icon: "�",
-    year: "2022"
+    year: "2025"
   }
 ];
 
 export const education = [
   {
-    degree: "Bachelor of Technology",
+    degree: "Master of Computer Applications (MCA)",
+    field: "AI and ML",
+    institution: "Chandigarh University",
+    location: "Mohali, India",
+    duration: "2024 - 2026",
+    grade: "9 CGPA",
+    description: "Specialized in Artificial Intelligence and Machine Learning with focus on deep learning algorithms, neural networks, data science, and intelligent systems. Coursework includes Python programming, statistical analysis, computer vision, and natural language processing."
+  },
+  {
+    degree: "Bachelor of Computer Applications (BCA)",
     field: "Computer Science Engineering",
-    institution: "XYZ University",
-    location: "India",
-    duration: "2019 - 2023",
-    grade: "8.5 CGPA",
+    institution: "Tilak Raj Chadha Institute of Management & Technology",
+    location: "Yamuna Nagar, India",
+    duration: "2021 - 2024",
+    grade: "7.79 CGPA",
     description: "Specialized in software engineering, data structures, algorithms, and web development. Active member of coding club and technical societies."
   }
 ];
 
 export const stats = [
   { label: "Years Experience", value: "2+", icon: "💼" },
-  { label: "Projects Completed", value: "15+", icon: "🚀" },
-  { label: "Happy Clients", value: "10+", icon: "😊" },
-  { label: "Code Commits", value: "1000+", icon: "💻" }
+  { label: "Projects Completed", value: "5+", icon: "🚀" },
+  { label: "Happy Clients", value: "5+", icon: "😊" },
+  { label: "Code Commits", value: "500+", icon: "💻" }
 ];
 
 export const socialLinks = [
@@ -150,17 +159,17 @@ export const socialLinks = [
   },
   {
     name: "GitHub",
-    url: "https://github.com/sudhanshgoel",
+    url: "https://github.com/sudhanshgoel1",
     icon: "github"
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/sudhanshgoel",
+    url: "https://twitter.com/sudhanshgoel1",
     icon: "twitter"
   },
   {
     name: "Email",
-    url: "mailto:sudhansh.goel@example.com",
+    url: "mailto:sudhanshgoel0001@gmail.com",
     icon: "email"
   }
 ];

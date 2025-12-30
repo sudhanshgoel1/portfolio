@@ -29,7 +29,7 @@ const About = (): JSX.Element => {
                   I explored modern web and backend technologies, working on projects like a Bank Management System (C#) and a Property Management System (ReactJS + TypeScript + .NET + PostgreSQL), gaining hands-on experience in full-stack development.
                 </p>
                 <p>
-                  Today, I'm a Software Engineer building dynamic and scalable web applications with expertise in ReactJS, TypeScript, .NET, C#, Golang, and PostgreSQL. I'm also pursuing my Master's in Computer Applications at Chandigarh University.
+                  Today, I'm a Software Engineer building dynamic and scalable web applications with expertise in ReactJS, TypeScript, React Native, .NET, C#, Golang, and PostgreSQL. I'm also pursuing my Master's in Computer Applications at Chandigarh University.
                 </p>
                 <p>
                   For me, this path is about solving problems, embracing challenges, and building impactful solutions — and it's only just beginning.
@@ -106,7 +106,7 @@ const About = (): JSX.Element => {
             <div className="skills-preview" data-aos="fade-up" data-aos-delay="700">
               <h4 className="skills-title">Tech Stack</h4>
               <div className="skills-tags">
-                {['React', 'TypeScript', 'Golang', 'PostgreSQL', '.NET', 'Docker'].map((skill, index) => (
+                {['React', 'TypeScript', 'React Native', '.NET', 'Golang', 'PostgreSQL'].map((skill, index) => (
                   <span 
                     key={index}
                     className="skill-tag"

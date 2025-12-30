@@ -77,6 +77,7 @@ const Hero = (): JSX.Element => {
                 Passionate software engineer specializing in full-stack development with expertise in
                 <span className="tech-highlight"> .NET Core</span>,
                 <span className="tech-highlight"> React</span>,
+                <span className="tech-highlight"> React Native</span>,
                 <span className="tech-highlight"> TypeScript</span>, and
                 <span className="tech-highlight"> Golang</span>.
                 I create scalable, user-focused applications that solve real-world problems.

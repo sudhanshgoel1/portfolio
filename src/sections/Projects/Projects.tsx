@@ -34,7 +34,7 @@ const Projects = (): JSX.Element => {
           </div>
 
           {/* Project Stats */}
-          <div className="project-stats" data-aos="fade-up" data-aos-delay="600">
+          {/* <div className="project-stats" data-aos="fade-up" data-aos-delay="600">
             <div className="project-stats-container grid-4">
               <div className="stat-card-unified">
                 <div className="stat-icon">🚀</div>
@@ -60,7 +60,7 @@ const Projects = (): JSX.Element => {
                 <div className="stat-label">Availability</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Call to Action */}
           <div className="projects-cta" data-aos="fade-up" data-aos-delay="800">
@@ -75,9 +75,9 @@ const Projects = (): JSX.Element => {
                   <a href="#contact" className="btn-modern btn-primary">
                     Get In Touch
                   </a>
-                  <a href="https://github.com/sudhanshgoel" className="btn-modern btn-outline" target="_blank" rel="noopener noreferrer">
+                  {/* <a href="https://github.com/sudhanshgoel1" className="btn-modern btn-outline" target="_blank" rel="noopener noreferrer">
                     View GitHub
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>

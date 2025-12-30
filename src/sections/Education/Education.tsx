@@ -99,7 +99,7 @@ const Education = (): JSX.Element => {
               <div className="stat-item">
                 <div className="stat-icon">📚</div>
                 <div className="stat-content">
-                  <div className="stat-number">8.5</div>
+                  <div className="stat-number">8.39</div>
                   <div className="stat-label">CGPA</div>
                 </div>
               </div>
@@ -115,7 +115,7 @@ const Education = (): JSX.Element => {
           </div>
 
           {/* Current Status */}
-          <div className="current-status" data-aos="fade-up" data-aos-delay="600">
+          {/* <div className="current-status" data-aos="fade-up" data-aos-delay="600">
             <div className="status-card">
               <div className="status-icon">📖</div>
               <div className="status-content">
@@ -132,7 +132,7 @@ const Education = (): JSX.Element => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

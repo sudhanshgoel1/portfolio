@@ -45,13 +45,13 @@ const Experience = (): JSX.Element => {
               
               <div className="stat-card-unified">
                 <div className="stat-icon">🚀</div>
-                <div className="stat-number">15+</div>
+                <div className="stat-number">5+</div>
                 <div className="stat-label">Projects Delivered</div>
               </div>
               
               <div className="stat-card-unified">
                 <div className="stat-icon">🏢</div>
-                <div className="stat-number">3</div>
+                <div className="stat-number">2</div>
                 <div className="stat-label">Major Applications</div>
               </div>
               
@@ -71,30 +71,31 @@ const Experience = (): JSX.Element => {
                 <h3 className="growth-title">Professional Growth & Technical Excellence</h3>
                 <p className="growth-text">
                   As a dedicated Software Engineer with 2+ years of experience, I've consistently delivered 
-                  innovative solutions across diverse domains including Legal Tech, Fleet Management, and 
-                  Political Campaign Systems. My expertise spans full-stack development with modern technologies, 
-                  and I take pride in writing clean, maintainable code that scales with business needs.
+                  innovative solutions across diverse domains including social media platforms and integration systems. 
+                  My expertise spans full-stack development with modern technologies, working on major applications like 
+                  Fan1 (a comprehensive social media platform) and MetricHub (a multiple integration platform). 
+                  I take pride in writing clean, maintainable code that scales with business needs.
                 </p>
                 <div className="growth-highlights">
                   <div className="highlight-item">
-                    <div className="highlight-icon">🎯</div>
+                    <div className="highlight-icon">📱</div>
                     <div className="highlight-text">
-                      <strong>End-to-End Development:</strong> Led complete application lifecycles from 
-                      requirement analysis to deployment and maintenance
+                      <strong>Social Media Platform (Fan1):</strong> Developed and maintained a comprehensive 
+                      social media application with user engagement features and real-time interactions
                     </div>
                   </div>
                   <div className="highlight-item">
-                    <div className="highlight-icon">🤝</div>
+                    <div className="highlight-icon">🔗</div>
                     <div className="highlight-text">
-                      <strong>Client Collaboration:</strong> Direct stakeholder communication, requirement 
-                      gathering, and solution architecture design
+                      <strong>Integration Platform (MetricHub):</strong> Built a robust multiple integration 
+                      platform connecting various services and APIs for seamless data flow
                     </div>
                   </div>
                   <div className="highlight-item">
                     <div className="highlight-icon">⚡</div>
                     <div className="highlight-text">
-                      <strong>DevOps Excellence:</strong> Implemented CI/CD pipelines, automated testing, 
-                      and deployment strategies for improved efficiency
+                      <strong>Full-Stack Excellence:</strong> Implemented end-to-end solutions with modern 
+                      frameworks, ensuring scalability and optimal performance across applications
                     </div>
                   </div>
                 </div>

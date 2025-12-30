@@ -73,7 +73,7 @@ const Achievements = (): JSX.Element => {
           </div>
 
           {/* Achievement Stats */}
-          <div className="achievement-stats" data-aos="fade-up" data-aos-delay="600">
+          {/* <div className="achievement-stats" data-aos="fade-up" data-aos-delay="600">
             <div className="achievement-stats-container">
               <div className="stat-card">
                 <div className="stat-icon">🏆</div>
@@ -107,7 +107,7 @@ const Achievements = (): JSX.Element => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Motivation Quote */}
           <div className="motivation-section" data-aos="fade-up" data-aos-delay="800">
