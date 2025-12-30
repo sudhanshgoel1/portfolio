@@ -19,26 +19,51 @@ const Contact = (): JSX.Element => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:sudhanshgoel0001@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open default email client
-    window.location.href = mailtoLink;
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    try {
+      // Create formatted message for clipboard
+      const formattedMessage = `Subject: ${formData.subject || 'Contact from Portfolio'}
+
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+
+---
+Please send this to: sudhanshgoel0001@gmail.com`;
+
+      // Copy formatted message to clipboard
+      await navigator.clipboard.writeText(formattedMessage);
+      
+      // Reset form and show success message
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
+      setSubmitStatus('success');
+      
+      alert('✅ Your message has been copied to clipboard!\n\nPlease paste it in your email client and send to: sudhanshgoel0001@gmail.com');
+      
+    } catch (error) {
+      console.error('Error copying to clipboard:', error);
+      setSubmitStatus('error');
+      
+      // Fallback: show the message in an alert
+      const message = `Please email me at: sudhanshgoel0001@gmail.com\n\nSubject: ${formData.subject}\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+      alert(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -138,10 +163,26 @@ const Contact = (): JSX.Element => {
                     />
                   </div>
 
-                  <button type="submit" className="btn-modern btn-primary form-submit">
+                  <button 
+                    type="submit" 
+                    className={`btn-modern btn-primary form-submit ${isSubmitting ? 'submitting' : ''}`}
+                    disabled={isSubmitting}
+                  >
                     <FiSend className="btn-icon" />
-                    Send Message
+                    {isSubmitting ? 'Opening Email...' : 'Send Message'}
                   </button>
+
+                  {submitStatus === 'success' && (
+                    <div className="form-message success">
+                      ✅ Form submitted! Your email client should open shortly.
+                    </div>
+                  )}
+                  
+                  {submitStatus === 'error' && (
+                    <div className="form-message error">
+                      ❌ Please email me directly at: sudhanshgoel0001@gmail.com
+                    </div>
+                  )}
                 </form>
               </div>
             </div>

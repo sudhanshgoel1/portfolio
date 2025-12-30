@@ -1,5 +1,6 @@
 import React from "react";
 import "./ExperienceCard.css";
+import { FaBriefcase } from "react-icons/fa";
 
 interface ExperienceCardProps {
   role: string;
@@ -42,7 +43,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({
             <div className="experience-duration">{duration}</div>
           </div>
           <div className="experience-icon">
-            💼
+            <FaBriefcase />
           </div>
         </div>
 

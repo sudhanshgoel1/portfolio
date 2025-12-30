@@ -3,6 +3,7 @@ import './Experience.css';
 import { ExperienceCard } from '../../components/ExperienceCard/ExperienceCard';
 import MultiShadeText from '../../components/MultiShadeText/MultiShadeText';
 import { experiences } from '../../dummyData/dummyData';
+import { FaBriefcase, FaRocket, FaBuilding, FaStar, FaChartLine, FaMobile, FaLink, FaBolt } from 'react-icons/fa';
 
 const Experience = (): JSX.Element => {
   return (
@@ -38,25 +39,33 @@ const Experience = (): JSX.Element => {
           <div className="experience-stats" data-aos="fade-up" data-aos-delay="600">
             <div className="experience-stats-container grid-4">
               <div className="stat-card-unified">
-                <div className="stat-icon">💼</div>
+                <div className="stat-icon">
+                  <FaBriefcase />
+                </div>
                 <div className="stat-number">2+</div>
                 <div className="stat-label">Years Experience</div>
               </div>
               
               <div className="stat-card-unified">
-                <div className="stat-icon">🚀</div>
+                <div className="stat-icon">
+                  <FaRocket />
+                </div>
                 <div className="stat-number">5+</div>
                 <div className="stat-label">Projects Delivered</div>
               </div>
               
               <div className="stat-card-unified">
-                <div className="stat-icon">🏢</div>
+                <div className="stat-icon">
+                  <FaBuilding />
+                </div>
                 <div className="stat-number">2</div>
                 <div className="stat-label">Major Applications</div>
               </div>
               
               <div className="stat-card-unified">
-                <div className="stat-icon">⭐</div>
+                <div className="stat-icon">
+                  <FaStar />
+                </div>
                 <div className="stat-number">100%</div>
                 <div className="stat-label">Client Satisfaction</div>
               </div>
@@ -66,7 +75,9 @@ const Experience = (): JSX.Element => {
           {/* Professional Growth */}
           <div className="professional-growth" data-aos="fade-up" data-aos-delay="800">
             <div className="growth-card">
-              <div className="growth-icon">📈</div>
+              <div className="growth-icon">
+                <FaChartLine />
+              </div>
               <div className="growth-content">
                 <h3 className="growth-title">Professional Growth & Technical Excellence</h3>
                 <p className="growth-text">
@@ -78,21 +89,27 @@ const Experience = (): JSX.Element => {
                 </p>
                 <div className="growth-highlights">
                   <div className="highlight-item">
-                    <div className="highlight-icon">📱</div>
+                    <div className="highlight-icon">
+                      <FaMobile />
+                    </div>
                     <div className="highlight-text">
                       <strong>Social Media Platform (Fan1):</strong> Developed and maintained a comprehensive 
                       social media application with user engagement features and real-time interactions
                     </div>
                   </div>
                   <div className="highlight-item">
-                    <div className="highlight-icon">🔗</div>
+                    <div className="highlight-icon">
+                      <FaLink />
+                    </div>
                     <div className="highlight-text">
                       <strong>Integration Platform (MetricHub):</strong> Built a robust multiple integration 
                       platform connecting various services and APIs for seamless data flow
                     </div>
                   </div>
                   <div className="highlight-item">
-                    <div className="highlight-icon">⚡</div>
+                    <div className="highlight-icon">
+                      <FaBolt />
+                    </div>
                     <div className="highlight-text">
                       <strong>Full-Stack Excellence:</strong> Implemented end-to-end solutions with modern 
                       frameworks, ensuring scalability and optimal performance across applications

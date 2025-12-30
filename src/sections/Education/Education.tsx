@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import './Education.css';
 import MultiShadeText from '../../components/MultiShadeText/MultiShadeText';
 import { education } from '../../dummyData/dummyData';
-import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaStar } from "react-icons/fa";
+import { FaGraduationCap, FaMapMarkerAlt, FaCalendarAlt, FaStar, FaUniversity, FaBook, FaBullseye } from "react-icons/fa";
 
 const Education = (): JSX.Element => {
   return (
@@ -81,7 +81,9 @@ const Education = (): JSX.Element => {
           <div className="education-stats" data-aos="fade-up" data-aos-delay="400">
             <div className="stats-grid">
               <div className="stat-item">
-                <div className="stat-icon">🎓</div>
+                <div className="stat-icon">
+                  <FaGraduationCap />
+                </div>
                 <div className="stat-content">
                   <div className="stat-number">4+</div>
                   <div className="stat-label">Years of Study</div>
@@ -89,7 +91,9 @@ const Education = (): JSX.Element => {
               </div>
               
               <div className="stat-item">
-                <div className="stat-icon">🏛️</div>
+                <div className="stat-icon">
+                  <FaUniversity />
+                </div>
                 <div className="stat-content">
                   <div className="stat-number">2</div>
                   <div className="stat-label">Universities</div>
@@ -97,7 +101,9 @@ const Education = (): JSX.Element => {
               </div>
               
               <div className="stat-item">
-                <div className="stat-icon">📚</div>
+                <div className="stat-icon">
+                  <FaBook />
+                </div>
                 <div className="stat-content">
                   <div className="stat-number">8.39</div>
                   <div className="stat-label">CGPA</div>
@@ -105,7 +111,9 @@ const Education = (): JSX.Element => {
               </div>
               
               <div className="stat-item">
-                <div className="stat-icon">🎯</div>
+                <div className="stat-icon">
+                  <FaBullseye />
+                </div>
                 <div className="stat-content">
                   <div className="stat-number">2026</div>
                   <div className="stat-label">Graduation</div>

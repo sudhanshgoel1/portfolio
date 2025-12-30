@@ -122,6 +122,13 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   animation: pulse 2s ease-in-out infinite;
+  color: var(--primary-purple);
+  transition: var(--transition-normal);
+}
+
+.philosophy-card:hover .philosophy-icon {
+  color: var(--primary-cyan);
+  transform: scale(1.1);
 }
 
 .philosophy-title {

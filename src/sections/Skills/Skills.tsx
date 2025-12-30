@@ -3,6 +3,7 @@ import './Skills.css';
 import { skills } from '../../dummyData/dummyData';
 import SkillCard from '../../components/SkillCard/SkillCard';
 import MultiShadeText from '../../components/MultiShadeText/MultiShadeText';
+import { FaBullseye } from 'react-icons/fa';
 
 const Skills = (): JSX.Element => {
   // Additional technologies for tags
@@ -91,7 +92,9 @@ const Skills = (): JSX.Element => {
           {/* Learning Philosophy */}
           <div className="learning-philosophy" data-aos="fade-up" data-aos-delay="800">
             <div className="philosophy-card">
-              <div className="philosophy-icon">🎯</div>
+              <div className="philosophy-icon">
+                <FaBullseye />
+              </div>
               <div className="philosophy-content">
                 <h3 className="philosophy-title">Continuous Learning Mindset</h3>
                 <p className="philosophy-text">
