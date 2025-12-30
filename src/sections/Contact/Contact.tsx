@@ -2,6 +2,7 @@ import React, { JSX, useState } from 'react';
 import "./Contact.css";
 import MultiShadeText from '../../components/MultiShadeText/MultiShadeText';
 import { FiMail, FiPhone, FiMapPin, FiSend, FiUser, FiMessageSquare } from 'react-icons/fi';
+import CustomAlert from '../../components/CustomAlert/CustomAlert';
 
 const Contact = (): JSX.Element => {
   const [formData, setFormData] = useState({
@@ -20,50 +21,82 @@ const Contact = (): JSX.Element => {
   };
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [alertConfig, setAlertConfig] = useState({
+    isOpen: false,
+    type: 'success' as 'success' | 'error',
+    title: '',
+    message: ''
+  });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-    
+
     try {
-      // Create formatted message for clipboard
-      const formattedMessage = `Subject: ${formData.subject || 'Contact from Portfolio'}
-
-Name: ${formData.name}
-Email: ${formData.email}
-
-Message:
-${formData.message}
-
----
-Please send this to: sudhanshgoel0001@gmail.com`;
-
-      // Copy formatted message to clipboard
-      await navigator.clipboard.writeText(formattedMessage);
-      
-      // Reset form and show success message
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      // Web3Forms API - replace YOUR_ACCESS_KEY with actual key from web3forms.com
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'ed4c8689-0ef9-445b-83d7-b140ea0e587a',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: formData.name,
+          replyto: formData.email,
+        }),
       });
-      setSubmitStatus('success');
-      
-      alert('✅ Your message has been copied to clipboard!\n\nPlease paste it in your email client and send to: sudhanshgoel0001@gmail.com');
-      
+
+      const result = await response.json();
+
+      if (result.success) {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+
+        // Show custom success alert
+        setAlertConfig({
+          isOpen: true,
+          type: 'success',
+          title: 'Message Sent Successfully!',
+          message: 'Thank you for reaching out! I\'ll get back to you as soon as possible.'
+        });
+
+        // Auto-close alert after 4 seconds
+        setTimeout(() => {
+          setAlertConfig(prev => ({ ...prev, isOpen: false }));
+        }, 4000);
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
     } catch (error) {
-      console.error('Error copying to clipboard:', error);
-      setSubmitStatus('error');
-      
-      // Fallback: show the message in an alert
-      const message = `Please email me at: sudhanshgoel0001@gmail.com\n\nSubject: ${formData.subject}\nName: ${formData.name}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
-      alert(message);
+      console.error('Error sending message:', error);
+
+      // Show custom error alert
+      setAlertConfig({
+        isOpen: true,
+        type: 'error',
+        title: 'Message Failed to Send',
+        message: 'Something went wrong. Please try again or email me directly at sudhanshgoel0001@gmail.com'
+      });
+
+      // Auto-close alert after 6 seconds (longer for error to read email)
+      setTimeout(() => {
+        setAlertConfig(prev => ({ ...prev, isOpen: false }));
+      }, 6000);
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleAlertClose = () => {
+    setAlertConfig(prev => ({ ...prev, isOpen: false }));
   };
 
   return (
@@ -163,26 +196,14 @@ Please send this to: sudhanshgoel0001@gmail.com`;
                     />
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className={`btn-modern btn-primary form-submit ${isSubmitting ? 'submitting' : ''}`}
                     disabled={isSubmitting}
                   >
                     <FiSend className="btn-icon" />
-                    {isSubmitting ? 'Opening Email...' : 'Send Message'}
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
-
-                  {submitStatus === 'success' && (
-                    <div className="form-message success">
-                      ✅ Form submitted! Your email client should open shortly.
-                    </div>
-                  )}
-                  
-                  {submitStatus === 'error' && (
-                    <div className="form-message error">
-                      ❌ Please email me directly at: sudhanshgoel0001@gmail.com
-                    </div>
-                  )}
                 </form>
               </div>
             </div>
@@ -270,6 +291,15 @@ Please send this to: sudhanshgoel0001@gmail.com`;
           </div>
         </div>
       </div>
+
+      {/* Custom Alert */}
+      <CustomAlert
+        isOpen={alertConfig.isOpen}
+        type={alertConfig.type}
+        title={alertConfig.title}
+        message={alertConfig.message}
+        onClose={handleAlertClose}
+      />
     </section>
   );
 };

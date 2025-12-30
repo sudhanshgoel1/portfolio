@@ -420,7 +420,6 @@
   }
   
   .education-header {
-    flex-direction: column;
     align-items: stretch;
     gap: 1rem;
     margin-bottom: 1.25rem;
